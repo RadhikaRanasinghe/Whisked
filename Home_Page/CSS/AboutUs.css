@@ -1,0 +1,102 @@
+/* any areas that style isn't specified will have the styles below */
+* {
+    font-family: "Marker Felt";
+    color: #886376;   /* purple */
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+/*main container*/
+/* uses grid - 2 columns */
+.container{
+    max-width: 1300px;
+    margin: auto;
+    background: white;
+    padding: 150px 10px 10px 10px;
+    height: 1100px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 600px 570px;
+    grid-template-rows: 90px 50px auto auto;
+    grid-column-gap: 100px;
+}
+
+/* main heading */
+h1{
+    font-size: 36px;
+    font-family: "Marker Felt";
+    color: #A7A9AC; /* grey */
+    text-align: center;
+    grid-column:1/span 2;
+}
+
+
+
+/* para in column 1 */
+.text{
+    width: 600px;
+    grid-column:1/2 ;
+    padding: 50px 20px 20px 20px;
+}
+
+
+body{
+
+    font-size: 24px;
+
+}
+
+/* sentence in text */
+span.phrase{
+    font-size: 28px;
+    color: #A7A9AC; /* grey */
+}
+
+/* name of the bakery*/
+span.site-name{
+    font-size: 32px;
+    color: #B2DDDC; /* light blue */
+}
+
+
+/* animation position */
+#myContainer {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+/* animation position */
+#myAnimation {
+    width: 50px;
+    position: fixed;
+}
+
+/* position of font arrows  */
+.arrows{
+    /*  placed in front */
+    z-index: 99;
+    height: 50px;
+    float: right;
+    margin: auto;
+}
+
+
+#btn-top {
+    position: fixed; /* Fixed */
+    bottom: 20px; /*placed at the bottom of page*/
+    right: 100px;
+    z-index: 99; /* Make sure it does not overlap */
+    border: none;
+    background-color: #F9BDC4; /* dark pink */
+    color: white; /* white */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px;
+    border-radius: 280px;
+    font-size: 16px;
+}
+
+#btn-top:hover{
+    background-color: #A7A9AC; /* Add a grey background on hover */
+}

@@ -1,0 +1,404 @@
+
+body {
+    font-family: "Marker Felt";
+    font-size: 20px;
+    color: #A7A9AC;
+    margin: 0;
+    padding: 0;
+}
+
+#cakes{
+    margin-top: 200px;
+}
+
+.container {
+    max-width: 1400px;
+    height: auto;
+    margin: auto;
+    position: relative;
+}
+
+.content-section {
+    margin: 100px;
+}
+
+
+.mainSection {
+    font-family: "Marker Felt";
+    color: #A7A9AC;
+    text-align: center;
+    font-size: 36px;
+    margin-top: 30px;
+}
+
+/* holds all product items */
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+/* enntire item - img and des */
+.shop-item {
+    margin: 40px;
+}
+
+/* item name*/
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    /*font-size: 20px;*/
+    color: #A7A9AC;
+    margin-bottom: 15px;
+}
+
+
+/*item picture */
+.shop-item-image {
+    border-radius: 280px;
+    width: 250px;
+    height: 150px;
+}
+
+
+/* image background */
+.img-wrap {
+    position: relative;
+    height: 150px;
+    width: 250px;
+    border-radius: 280px;
+    display: inline-block;
+
+}
+
+
+/* text displayed over image */
+.img-description{
+    height: 150px;
+    width: 250px;
+    position: absolute;
+    font-size: 14px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #F9BDC4;
+    border-radius: 280px;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    vertical-align: middle;
+
+
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+}
+
+/* text when hover over image */
+.img-wrap:hover .img-description {
+    border-radius: 280px;
+    visibility: visible;
+    opacity: 1;
+}
+
+/*price and add button */
+.shop-item-details {
+    font-family: "Marker Felt", serif;
+    /*font-size: 20px;*/
+    text-align: center;
+    color: white;
+    padding: 20px 0 20px 0;
+    /*border: 2px solid #B2DDDC;
+    border-radius: 280px;
+    background-color: #B2DDDC;*/
+
+}
+
+/*price */
+.shop-item-price {
+    flex-grow: 1;
+    color: #A7A9AC;
+}
+
+
+/* calss for all buttons */
+.btn {
+    font-family: "Marker Felt", serif;
+
+    text-align: center;
+    color: white;
+    padding: 20px 50px;
+    border: 2px solid #B2DDDC;
+    border-radius: 280px;
+    background-color: #B2DDDC;
+
+}
+
+/* main buttons*/
+.btn-primary {
+    font-family: "Marker Felt", serif;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    padding: 20px 50px;
+    border: 2px solid #B2DDDC;
+    border-radius: 280px;
+    background-color: #B2DDDC;
+    /*color: white;
+    background-color: #B2DDDC;
+    border: none;
+    border-radius: 280px;*/
+}
+
+.btn-primary:hover {
+    background-color: #A7A9AC;
+    border: 2px solid #A7A9AC;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* -------   MODAL   -------  */
+.modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stays in place */
+    z-index: 98; /* Sits on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 4300px;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: white;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 90%;
+    height: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop; /*for chrome*/
+    -webkit-animation-duration: 0.4s; /*time taken for animation*/
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation - changes over time */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* Modal Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #A7A9AC;
+    text-decoration: none;
+    cursor: default;
+}
+
+/* modal heading */
+.modal-header {
+    padding: 10px 16px;
+    background-color: #FCE3E1;
+    color: white;
+    font-family: "Marker Felt", serif;
+    text-align: center;
+}
+
+/* modal body - where items are shown */
+.modal-body {
+    margin: 10px;
+}
+
+.modal-body .labelOrder {
+    margin: 40px;
+    padding-top: 20px;
+    width: 350px;
+    height: 400px;
+    background-color: #886376;
+    float: left;
+    text-align: center;
+    font-family: "Marker Felt", serif;
+    /*font-size: 20px;*/
+    color: #A7A9AC;
+}
+
+.modal-body #displayedImg{
+    margin-top: 20px;
+    border-radius: 0;
+}
+
+/* form for customer info */
+#orders{
+    padding: 20px;
+    font-family: "Marker Felt", serif;
+    color: #A7A9AC;
+    background-color: #886376;
+}
+
+/*CART DETAILS - CHECKOUT*/
+.cart-header {
+    font-weight: bold;
+    /*font-size: 20px;*/
+    color: #A7A9AC;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 25px;
+    padding-bottom: 10px;
+    float: bottom;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    /*font-size: 20px;*/
+    color: #A7A9AC;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #A7A9AC;
+    margin-left: 10px;
+    /*font-size: 20px;*/
+}
+
+.cart-item-image {
+    margin-top: 5px;
+    width: 75px;
+    height: 57px;
+    border-radius: 280px;
+}
+
+/* remove button */
+.btn-danger {
+    color: white;
+    background-color: #F9BDC4;
+    padding: 10px;
+    border: none;
+    border-radius: 280px;
+    font-weight: bold;
+    margin-left: 60px;
+}
+
+.btn-danger:hover {
+    background-color: #A7A9AC;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #A7A9AC;
+    padding: 0;
+    text-align: center;
+    /*font-size: 20px;*/
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 24px;
+    color: #A7A9AC;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #A7A9AC;
+    /*font-size: 20px;*/
+}
+
+.btn-purchase {
+    display: block;
+    margin: 20px auto auto auto;
+    /*font-size: 20px;*/
+    padding: 10px;
+}
+
+
+
+/*   End of Modal   */
+/* -------------------------------- */
+
+
+/* fonnt chagers */
+.arrows{
+    height: 50px;
+    float: right;
+    margin: auto;
+
+}
+
+/* scroll button */
+#btn-top {
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 100px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #F9BDC4; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px; /* Increase font size */
+    font-family: "Marker Felt";
+}
+
+#btn-top:hover {
+    background-color: #A7A9AC; /* Add a dark-grey background on hover */
+}

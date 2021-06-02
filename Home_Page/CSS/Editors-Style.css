@@ -1,0 +1,66 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#recipes{
+    padding: 100px;
+    text-align: center;
+}
+.image > img{
+    width: 75%;
+    border-radius: 30px;
+}
+
+.editor-container{
+    background: rgba(169, 121, 180, 0.24);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: minmax(100px, auto);
+    justify-items: stretch;
+    align-items: stretch ;
+}
+.image{
+    padding-top: 170px;
+    padding-left: 50px;
+    padding-bottom: 130px;
+    grid-column: 1/2;
+    grid-row: 2/4;
+}
+.editor-heading{
+    grid-column: 2/3;
+    grid-row: auto;
+    color: #505255;
+    font-family: 'Roboto Slab', serif;
+    font-size: 250%;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+    width: 50%;
+    margin-top: 100px;
+}
+.editor-body{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.8;
+}
+.heading{
+    font-family: 'Roboto Slab', serif;
+    font-size: 200%;
+    padding: 40px;
+}
+
+.list{
+    background: rgba(130, 130, 130, 0.74);
+    border-radius: 40px;
+    padding: 40px;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-right: 150px;
+}
+

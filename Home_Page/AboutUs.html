@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="CSS/AboutUs.css">
+    <link rel="stylesheet" type="text/css" href="CSS/Main-StyleSheet.css">
+    <title>About Us</title>
+</head>
+<body>
+<div class="menu-bar">
+    <div class="logo-container">
+        <img src="images/Shontaal-Whisked.png" alt="Logo" id="Logo">
+    </div>
+    <nav>
+        <ul>
+            <li ><a href="index.html">Home</a></li>
+            <li class="active-page"><a href="AboutUs.html">About Us</a></li>
+            <li><a href="OurProducts.html">Order Now</a>
+                <div class="sub-menu-products">
+                    <ul>
+                        <li><a href="ShopNow_.html#cake">Cakes</a></li>
+                        <li><a href="ShopNow_.html#cupcake">Cupcakes</a></li>
+                        <li><a href="ShopNow_.html#pie">Pies</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="Recipes.html">Recipes</a>
+                <div class="sub-menu-products">
+                    <ul>
+                        <li><a href="Recipes.html#Cookies&Cream">Cookies & Cream Cake</a></li>
+                        <li><a href="Recipes.html#ApplePie">Apple Pie</a></li>
+                        <li><a href="Recipes.html#SaltedCaramel">Salted Caramel Cupcakes</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+<!-- main container -->
+<div class="container">
+    <button onclick="topFunction()" id="btn-top" >Back to the top</button>
+    <div id="myAnimation"><img src="images/Shontaal-Whisked.png" alt="Whisked logo" width="60px"></div>
+    <h1>How it all started...</h1>
+    <div class="text" align="center">
+        <p>
+            It was 1938 when my great grandmother Shoshanna fled war stricken Germany with nothing but the clothes
+            on her back and a torn, hand written book that was coming apart at the edges. Through the years
+            this was her most treasured possession as this book had been handed down through generations of the
+            Friedrich family. It contained their most valuable secrets, the recipes to their beloved cakes.
+            <br><br>
+            Before the war her family were proud owners of the most celebrated bakery in Düsseldorf. People from
+            all over the country came to taste the scrumptious cakes baked there. With these recipes in her hand
+            Shoshanna felt invincible. Through her journey filled with endless trials and tribulations, Shoshanna
+            finally arrived in Boston and with only her book in hand, she opened a small bakery. Soon this tiny
+            bakery was filled with customers from everywhere waiting in line to taste these much talked about cakes.
+            <br><br>
+            <span class="phrase">And the name of that bakery?</span> <br><br>
+            <span class="site-name"> Whisked!</span><br><br>
+
+        </p>
+    </div>
+    <!-- when mouse moves over image, the site logo starts moving -->
+    <div id="myContainer" onmouseover="myMove()" onfocus="myMove()"><img src="images/intro.jpg" alt="Shoshanna" width="570px">
+        <br><br>
+        <!-- images used to indicate font increase/ decrease -->
+        <img class="arrows" alt="Increase text size" src="images/Arrow%20Up.png" onclick="resizeText(1)" />
+        <img class="arrows" alt="Decrease text size" src="images/Arrow%20Down.png" onclick="resizeText(-1)" />
+    </div>
+
+
+
+    <script>
+        //function will increase and decrease any font in the body
+        function resizeText(multiplier) {
+            if (document.body.style.fontSize == "") {
+                document.body.style.fontSize = "24px"; //starts from 24px
+            }
+            document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 1) + "px";
+            //increases or decrease by 1px when an image is clicked
+        }
+
+        //function for page to go back to the top
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        function myMove() {
+            var elem = document.getElementById("myAnimation");
+            var pos = 0;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (pos == 400) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    //elem.style.top = pos + 'px';
+                    elem.style.left = pos + 'px';
+                }
+            }
+        }
+    </script>
+
+</div>
+<footer class="footer">
+    <div class="footer-left">
+        <img src="images/Shontaal-Whisked.png" alt="logo">
+        <p class="footer-links">
+            <a href="#" class="link-1">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Order Now</a>
+            <a href="#">Recipes</a>
+            <a href="#">Contact</a>
+        </p>
+        <p class="whisked">Whisked © 2020</p>
+    </div>
+    <div class="footer-center">
+        <div>
+            <p><span>396, Shady Grove Avenue</span><span>Colombo, Sri Lanka</span></p>
+        </div>
+        <div>
+            <p><span>+94 77 123 4567</span></p>
+        </div>
+        <div>
+            <p><a href="mailto:support@whisked.com">support@whisked.com</a></p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <p class="about-company">
+            <span>About the company</span>
+            Whisked is a start-up bakery retail establishment located in Colombo, Sri Lanka.
+        </p>
+        <div class="footer-editors">
+            Edited by:<br>
+            <a href="PageDeveloper.html#task4">Lysandra Manuelpillai</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

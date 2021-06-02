@@ -1,0 +1,379 @@
+*
+{
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.4;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body
+{
+    background-color: mintcream;
+    background-size: cover;
+    background-position: center;
+}
+/*-----The Grid Container-----*/
+.wrapper{
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto); /*flexible row height*/
+    grid-row-gap: 1em;
+    justify-items: stretch;
+    align-items: stretch ;
+}
+/*------Background Colours in the grid elements---*/
+.wrapper > div{
+    background:#deebec ;
+    padding: 1em;
+}
+
+.wrapper >div:nth-child(1),.wrapper >div:nth-child(8), .wrapper>div:nth-child(9),.wrapper >div:nth-child(4){
+    background: mintcream;
+}
+
+
+
+.box1 {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    object-fit: contain;
+    width: 100%;
+}
+.wrapper >div:nth-child(2){
+    background: #B2DDDC;
+}
+.box2{
+    grid-column: 2/4;
+    grid-row: 1/4;
+    text-align: center;
+    font-size: 400%;
+    color: #4A3A3A;
+}
+.wrapper >div:nth-child(3){
+    background :#F9BDC4;
+}
+.box3{
+    grid-column: 1/3;
+    grid-row: 4/6;
+    text-align: center;
+    font-size: 160%;
+    color: #628786;
+}
+.our-story{
+    font-size: 150%;
+    color: #628786;
+    text-align: center;
+    padding: 30px;
+}
+
+.box4{
+    grid-column: 3/4;
+    grid-row: 4/6;
+    text-align: center;
+    object-fit: contain;
+    width: 100%;
+}
+.box4 a:hover{
+    opacity: 10%;
+}
+.wrapper >div:nth-child(5){
+    background: #A7A9AC ;
+}
+.box5{
+    grid-column: 1/4;
+    grid-row: 6/9;
+    text-align: center;
+}
+.rate-comment-body{
+    text-align: center;
+    color: mintcream;
+    font-size: 150%;
+    padding: 60px;
+}
+.comment{
+    border: none;
+    background: white;
+}
+.comment-button {
+    background-color: #A7A9AC;
+    border: none;
+    color: mintcream;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.comment-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.comment-button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.comment-button:hover span {
+    padding-right: 25px;
+}
+
+.comment-button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.box6{
+    grid-column: 1/2;
+    grid-row: 9/12;
+    object-fit: contain;
+    width: 100%;
+
+}
+.our-products{
+    margin-top: 10%;
+    padding: 20px;
+    font-size: 450%;
+    color: mintcream;
+}
+.our-products-body{
+    text-align: center;
+    font-size: 160%;
+    color: mintcream;
+    padding: 30px;
+}
+.button-whisked {
+    background-color: #89abd2;
+    border: none;
+    color: mintcream;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button-whisked span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button-whisked span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button-whisked:hover span {
+    padding-right: 25px;
+}
+
+.button-whisked:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.button-read-more {
+    background-color:  #F9BDC4;
+    border: none;
+    color: #628786;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.button-read-more span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button-read-more span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button-read-more:hover span {
+    padding-right: 25px;
+}
+
+.button-read-more:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.wrapper >div:nth-child(7){
+    background: #89abd2;
+}
+.box7{
+    grid-column: 2/4;
+    grid-row: 9/12;
+    text-align: center;
+}
+.box8{
+    grid-column: 1/4;
+    grid-row: 12/15;
+    width: 100%;
+    //grid-column-gap: 10px;
+}
+
+.icons-container {
+    width: 82%;
+    display: inline-flex;
+    margin-left: 10%;
+}
+.icons-box{
+    color: #805c89;
+    border:2px solid #805c89;
+    border-radius: 10px;
+
+    padding: 50px;
+    text-align: center;
+    display: block ;
+    justify-content: center;
+    margin: 10px;
+
+    width: 290px;
+    height: 290px;
+
+
+}
+.icons-box img{
+    width: 65%;
+}
+.icon-text{
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+
+/*-----Modal CSS----*/
+
+.bg-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top:0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+.active {
+    visibility: visible;
+    opacity: 1;
+}
+.modal-contents{
+    width: 550px;
+    height: 600px;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+.comment-fields{
+    justify-content: center;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.rate-heading{
+    font-family: 'Roboto Slab', serif;
+}
+.comment{
+    width: 90%;
+    margin: 15px auto;
+    padding: 5px;
+}
+#close-comment{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+.submit-comment {
+    background-color: #a96aa6;
+    border: 2px solid white;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 10px 28px;
+    color: white;
+    margin-top: 20px;
+    display: inline-block;
+}
+.submit-comment:hover {
+    background-color: white;
+    color: #a96aa6;
+    border: 2px solid #a96aa6;
+}
+.submit-button-container{
+    justify-content: center;
+}
+#modal-editor{
+    margin-top: 5px;
+    color: #222222;
+    font-size: 15px;
+}
+#modal-editor > a{
+    text-decoration: none;
+    color: #222222;
+    font-size: 15px;
+}
+.rate {
+    display: inline-block;
+    text-align: center;
+}
+.rate:not(:checked) > input {
+    display: none;
+}
+.rate:not(:checked) > label {
+    float:right;
+    cursor:pointer;
+    font-size:50px;
+    color:#101010;
+}
+.rate > input:checked ~ label, /* show star when clicked */
+.rate:not(:checked) > label:hover, /* hover current star */
+.rate:not(:checked) > label:hover ~ label /* hover previous stars in the order*/{
+    color: #a96aa6;
+}
+
+.rate > input:checked + label:hover, /* hover current star when changing rating */
+.rate > input:checked ~ label:hover,
+.rate > label:hover ~ input:checked ~ label, /* lighten current selection when changing selection */
+.rate > input:checked ~ label:hover ~ label {
+    color: #f09eed;
+}

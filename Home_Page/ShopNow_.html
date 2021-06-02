@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop Now</title>
+    <!--external css and js(only this web page has external js-->
+    <link rel="stylesheet" type="text/css" href="CSS/ShopNow_.css" >
+    <link rel="stylesheet" type="text/css" href="CSS/Main-StyleSheet.css">
+    <script src="JS/ShopNow_.js" async></script><!--async tells browser to load js file inn the background-->
+</head>
+
+
+<body>
+<div class="menu-bar">
+    <div class="logo-container">
+        <img src="images/Shontaal-Whisked.png" alt="Logo" id="Logo">
+    </div>
+    <nav>
+        <ul>
+            <li class="active-page"><a href="index.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="ShopNow_.html">Order Now</a>
+                <div class="sub-menu-products">
+                    <ul>
+                        <li><a href="ShopNow_.html#cake">Cakes</a></li>
+                        <li><a href="ShopNow_.html#cupcake">Cupcakes</a></li>
+                        <li><a href="ShopNow_.html#pie">Pies</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="Recipes.html">Recipes</a>
+                <div class="sub-menu-products">
+                    <ul>
+                        <li><a href="Recipes.html#Cookies&Cream">Cookies & Cream Cake</a></li>
+                        <li><a href="Recipes.html#ApplePie">Apple Pie</a></li>
+                        <li><a href="Recipes.html#SaltedCaramel">Salted Caramel Cupcakes</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!--Body contains 4 sections:
+        sections 1 - 3: products
+        section 4: Add to Cart/checkout in modal box
+-->
+
+<!--scroll back up button - scrolls up for page AND modal box -->
+<button onclick="topFunction()" id="btn-top" >Back to the top</button>
+
+<!--Section 1-->
+    <section class="container content-section">
+        <!-- product 1 -CAKES -->
+        <h2 class="mainSection" id="cakes"><a name="cake">CAKES</a></h2>
+        <!-- div stores all the items that can be bought for each product-->
+        <div class="shop-items">
+            <!-- div holds an item -->
+            <div class="shop-item">
+                <span class="shop-item-title">Red Velvet Cake</span>
+                <!-- temp background layer to the image -->
+                <div class="img-wrap">
+                    <img class="shop-item-image" height="150px" width="250px" src="images/Cakes/Red%20Velvet%20Cake.jpg"
+                         alt="Red Velvet Cake">
+                    <!-- text kept in img-wrap which is displayed when mouse hovers over -->
+                    <p class="img-description"><br><br>If you are feeling particularly adventurous try our rich red velvet
+                        cake with light cream cheese frosting. You are in for a treat!</p>
+                </div>
+                <!-- item details-->
+                <div class="shop-item-details">
+                    <!-- price-->
+                    <span class="shop-item-price">$30</span><br><br>
+                    <!-- add to  cart buttonn will display modal box-->
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+
+            <!-- similar code is repeated for each item
+            No of items:
+            cakes - 8
+            cupcakes - 4
+            pies - 4
+            -->
+            <div class="shop-item">
+                <span class="shop-item-title">Chocolate Fudge Cake</span>
+                <div class="img-wrap">
+                    <img class="shop-item-image" height="150px" width="250px" src="images/Cakes/Chcolate%20Fudge%20copy.jpg"
+                         alt="Chocolate Fudge Cake">
+                    <p class="img-description"><br><br>Try our fan favourite chocolate fudge made with rich cocoa.
+                        This gooey fantasy will leave you wanting more!</p>
+                </div>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$30</span><br><br>
+                    <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                </div>
+            </div>
+
+
+            <div class="shop-item">
+                <span class="shop-item-title">Strawberry Cheesecake</span>
+                <div class="img-wrap">
+
+                    <img class="shop-item-image" height="150px" width="250px" src="images/Cakes/Strawberry%20Cheesecake%20copy.jpg"
+                         alt="Strawberry Cheesecake">
+                    <p class="img-description"><br><br>In the mood for some fruit put also cake? Try our
+                        strawberry cheesecake for the perfect balance of fruit, cream and tart!</p>
+                </div>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$40</span><br><br>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+
+
+            <div class="shop-item">
+                <span class="shop-item-title">Pink Strawberry Cake</span>
+                <div class="img-wrap">
+
+                    <img class="shop-item-image" height="150px" width="250px" src="images/Cakes/Pink%20Cake.jpg"
+                         alt="Pink Cake">
+                    <p class="img-description"><br><br>Hands down the most elegant cake you will see,
+                        or eat! Looks great on the outside, tastes better on the inside!</p>
+                </div>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$25</span><br><br>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+
+
+            <div class="shop-item">
+                <span class="shop-item-title">Blueberry and Cream Cake</span>
+                <div class="img-wrap">
+
+                    <img class="shop-item-image" height="150px" width="250px" src="images/Cakes/Blue%20Cake.jpg"
+                         alt="Blue Cake">
+                    <p class="img-description"><br><br>If you are feeling blue try our blueberry and cream cake!
+                        Guaranteed to elevate your mood!</p>
+                </div>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$40</span><br><br>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+
+
+            <div class="shop-item">
+                <span class="shop-item-title">Pink Swirl Cake</span>
+                <div class="img-wrap">
+                    <img class="shop-item-image" height="150px" width="250px" src="images/Cakes/Pink%20Swirl%20Cake.jpg"
+                         alt="Pink Swirl Cake">
+                    <p class="img-description"><br><br>A classic butter cake with simply delicious frosting for
+                        when you are in the mood for some good old fashioned cake! </p>
+                </div>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$30</span><br><br>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+
+
+            <div class="shop-item">
+                <span class="shop-item-title">Dulche de Leche Cheesecake</span>
+                <div class="img-wrap">
+                    <img class="shop-item-image" height="150px" width="250px" src="images/Cakes/Dulche%20de%20Leche%20Cheesecake.jpg"
+                         alt="Dulche de Leche Cheesecake">
+                    <p class="img-description"><br><br> A rich Latin American desert to satisfy all your cravings
+                        of cream cheese and caramel!</p>
+                </div>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$40</span><br><br>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+
+
+            <div class="shop-item">
+                <span class="shop-item-title">Rainbow Cake</span>
+                <div class="img-wrap">
+                    <img class="shop-item-image" height="150px" width="250px" src="images/Cakes/Rainow%20Cake.jpg"
+                         alt="Rainbow Cake">
+                    <p class="img-description"><br><br>This ones for those days when you need some color in your
+                        life... and some cake! Have both with our Rainbow cake</p>
+                </div>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$50</span><br><br>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+<!--End of Section 1-->
+
+
+    <!-- product 2 - CUPCAKES -->
+    <section class="container content-section">
+        <h2 class="mainSection"><a name="cupcake">CUPCAKES</a></h2>
+        <!-- div stores all the items that can be bought for each product-->
+        <div class="shop-items">
+
+            <div class="shop-item">
+                <span class="shop-item-title">Unicorn Cupcake</span>
+                <div class="img-wrap">
+                    <img class="shop-item-image" height="150px" width="250px" src="images/Cupcakes/Unicorn%20Cupcakes.jpg"
+                         alt="Unicorn Cupcake">
+                    <p class="img-description"><br><br>Try one of our cute unicorns cupcakes,
+                        great for birthday parties!</p>
+                </div>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$8</span><br><br>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+
+
+            <div class="shop-item">
+                <span class="shop-item-title">Chocolate cupcake</span>
+                <div class="img-wrap">
+                    <img class="shop-item-image" height="150px" width="250px" src="images/Cupcakes/Chocolate%20Cupcakes.jpg"
+                         alt="Chocolate cupcake">
+                    <p class="img-description"><br><br>All the goodness of your favourite chocolate
+                        cake in small doses!</p>
+                </div>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$5</span><br><br>
+                    <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                </div>
+            </div>
+
+
+            <div class="shop-item">
+                <span class="shop-item-title">Vanilla cupcake</span>
+                <div class="img-wrap">
+
+                    <img class="shop-item-image" height="150px" width="250px" src="images/Cupcakes/Vanilla%20Cupcakes.jpg"
+                         alt="Vanilla cupcake">
+                    <p class="img-description"><br><br>No one does the classics like us! Don’t believe us?
+                        Treat yourself to a delicious vanilla cupcake!</p>
+                </div>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$3</span><br><br>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+
+
+            <div class="shop-item">
+                <span class="shop-item-title">Coffee cupcake</span>
+                <div class="img-wrap">
+
+                    <img class="shop-item-image" height="150px" width="250px" src="images/Cupcakes/Coffee%20Cupcakes.jpg"
+                         alt="Coffee cupcake">
+                    <p class="img-description"><br><br>Made with freshly ground rich coffee beans to fill
+                        up your taste buds!</p>
+                </div>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$5</span><br><br>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+<!--End of Section 2-->
+
+
+    <!-- product 3 - PIES -->
+    <section class="container content-section">
+        <h2 class="mainSection"><a name="pie">PIES</a></h2>
+        <!-- div stores all the items that can be bought for each product-->
+        <div class="shop-items">
+
+            <div class="shop-item">
+                <span class="shop-item-title">Key Lime Pie</span>
+                <div class="img-wrap">
+                    <img class="shop-item-image" height="150px" width="250px" src="images/Pies/Key%20Lime%20Pie.jpg"
+                         alt="Key lime pie">
+                    <p class="img-description"><br><br>Our light and luscious key lime pie is a cool tangy
+                        taste of tradition!</p>
+                </div>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$20</span><br><br>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+
+
+            <div class="shop-item">
+                <span class="shop-item-title">Pumpkin Pie</span>
+                <div class="img-wrap">
+                    <img class="shop-item-image" height="150px" width="250px" src="images/Pies/Pumpkin%20Pie.jpg"
+                         alt="Pumpkin pie">
+                    <p class="img-description"><br><br>Craving bonfires, harvest, leaving falling and all things
+                        fall? Our pumpkin pie is the literal embodiment of fall!</p>
+                </div>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$20</span><br><br>
+                    <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                </div>
+            </div>
+
+
+            <div class="shop-item">
+                <span class="shop-item-title">Cherry Pie</span>
+                <div class="img-wrap">
+
+                    <img class="shop-item-image" height="150px" width="250px" src="images/Pies/Cherry%20Pie.jpg"
+                         alt="Cherry Pie">
+                    <p class="img-description"><br><br>Have a cherry pie and fall in love with life all
+                        over again!</p>
+                </div>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$20</span><br><br>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+
+
+            <div class="shop-item">
+                <span class="shop-item-title">Apple Pie</span>
+                <div class="img-wrap">
+                    <img class="shop-item-image" height="150px" width="250px" src="images/Pies/Apple%20Pie.jpg"
+                         alt="Apple Pie">
+                    <p class="img-description"><br><br>Our baked apple pie is the ultimate comfort food,
+                        bringing warmth and joy from our home to yours!</p>
+                </div>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$20</span><br><br>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+        <!-- images for the arrows that increase/decrease font size  -->
+        <img class="arrows" alt="Increase text size" src="images/Arrow%20Up.png" onclick="resizeText(1)" />
+        <img class="arrows" alt="Decrease text size" src="images/Arrow%20Down.png" onclick="resizeText(-1)" />
+    </section>
+<!--End of Section 3-->
+
+
+<!--MODAL BOX-->
+    <div id="modalBox" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <!-- Modal header -->
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>CHECKOUT</h2>
+            </div>
+            <div class="modal-body">
+                <section class="container content-section">
+                    <h2 class="mainSection">CART</h2>
+                    <!-- headings of the order summary -->
+                    <div class="cart-row">
+                        <!-- cart rows will be displayed here -->
+                        <span class="cart-item cart-header cart-column">ITEM</span>
+                        <span class="cart-price cart-header cart-column">PRICE</span>
+                        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                    </div>
+                    <div class="cart-items">
+                    </div>
+                    <!-- displays total price -->
+                    <div class="cart-total">
+                        <strong class="cart-total-title">Total</strong>
+                        <span class="cart-total-price">$0</span>
+                    </div>
+
+                    <!-- form for customer info -->
+                    <form name="orders" id="orders">
+                        Enter your Details:<br><br>
+                        <label for="fname" class="cart-details">Full Name: </label>
+                        <input type="text" id="fname" name="firstname" size="20" placeholder="Jane M. Doe">
+
+                        <label for="email" class="cart-details">Email: </label>
+                        <input type="text" id="email" name="email" size="30" placeholder="JaneDoe@example.com">
+
+                        <label for="address" class="cart-details">Address: </label>
+                        <input type="text" id="address" name="address" size="40" placeholder="2668 Aspen Court Boston">
+
+                        <!-- CHECKOUT button - order is cleared afterwards -->
+                        <input type="button" value="CHECKOUT" class="btn btn-primary btn-purchase">
+
+                    </form>
+
+
+                </section>
+
+
+            </div>
+        </div>
+
+    </div>
+<footer class="footer">
+    <div class="footer-left">
+        <img src="images/Shontaal-Whisked.png" alt="logo">
+        <p class="footer-links">
+            <a href="#" class="link-1">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Order Now</a>
+            <a href="#">Recipes</a>
+            <a href="#">Contact</a>
+        </p>
+        <p class="whisked">Whisked © 2020</p>
+    </div>
+    <div class="footer-center">
+        <div>
+            <p><span>396, Shady Grove Avenue</span><span>Colombo, Sri Lanka</span></p>
+        </div>
+        <div>
+            <p><span>+94 77 123 4567</span></p>
+        </div>
+        <div>
+            <p><a href="mailto:support@whisked.com">support@whisked.com</a></p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <p class="about-company">
+            <span>About the company</span>
+            Whisked is a start-up bakery retail establishment located in Colombo, Sri Lanka.
+        </p>
+        <div class="footer-editors">
+            Edited by:<br>
+            <a href="PageDeveloper.html#task3">Lysandra Manuelpillai</a>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

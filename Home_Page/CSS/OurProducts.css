@@ -1,0 +1,95 @@
+body{
+    font-family: "Marker Felt";
+    /*only those that rely on body{} to change font size will have their font size changed by the buttons*/
+    font-size: 16px; /*font size is set to 16 before font is increased or decreased*/
+    color: #A7A9AC;
+    margin: 0px;
+}
+
+#main-cake{
+    padding-top: 180px;
+}
+
+/* main container */
+.container{
+    max-width: 1400px;
+    height: 1800px;
+    margin: auto;
+    position: relative;
+}
+
+h2{
+    text-align: center;
+    font-family: "Marker Felt";
+    color: #A7A9AC;
+    padding-top: 120px;
+}
+
+/*button to shop now page*/
+.btn{
+    font-family: "Marker Felt";
+    font-size: 16px;
+    color: white;
+    background-color: #F9BDC4;
+    padding: 20px 50px;
+    border: none;
+    border-radius: 280px 280px 280px 280px;
+    position: relative;
+    max-width: 100px;
+    margin: auto;
+    alignment: center;
+}
+
+.btn:hover{
+    background-color: #B2DDDC;
+    cursor: pointer;
+}
+
+/*div with the 3 images for each product(*3)*/
+.product{
+    margin-bottom: 10px;
+}
+
+img:hover{
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+/* image on the left in each .product */
+.img1{
+    border-radius: 280px 0 0 280px;
+}
+
+/* image on the right in each .product */
+.img2{
+    border-radius: 0 280px 280px 0;
+}
+
+/* position of font arrows  */
+.arrows{
+    /*placed in front*/
+    z-index: 99;
+    height: 50px;
+    float: right;
+    margin: auto;
+}
+
+/*button to scroll up*/
+#btn-top{
+    position: fixed; /*Fixed position */
+    bottom: 20px; /*placed at the bottom of page*/
+    right: 100px;
+    z-index: 99; /* Make sure it does not overlap */
+    border: none;
+    background-color: #F9BDC4; /* Set a background color */
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 280px; /* Rounded corners */
+    font-size: 16px;
+    font-family: "Marker Felt";
+}
+
+#btn-top:hover{
+    background-color: #A7A9AC;
+}

@@ -1,0 +1,52 @@
+body{
+    background-color: #886376;
+}
+
+/* */
+/* main container */
+#myContainer {
+    padding-top: 500px;
+    max-width: 1400px;
+    height: 1300px;
+    margin: auto;
+    position: relative;
+}
+
+/* any areas that style isn't specified will have the styles below */
+*{
+    font-family: "Marker Felt";
+    text-align: center;
+    color: white;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 40px;
+    color: #B2DDDC;
+    margin-top: 50px;
+}
+
+
+/* specific line in the presentation page*/
+#line{
+    margin-top: 50px;
+    font-size: 30px;
+    color: #F9BDC4;
+}
+
+p{
+    font-family: "Marker Felt";
+    font-size: 25px;
+    color: white;
+}
+
+
+#myAnimation {
+    height: auto;
+    display: block;
+    /*initial position of the logo*/
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+}

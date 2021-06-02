@@ -1,0 +1,99 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#contact-us-heading{
+    color: #628786;
+    font-family: 'Bellota', cursive;
+    font-weight: bolder;
+    font-size: 450%;
+    margin-top: 90px;
+}
+#contact-us{
+    padding: 10px;
+    text-align: center;
+}
+#contact-us-form-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#comments-form-container{
+    padding: 100px;
+}
+#comments-form{
+    background: #B2DDDC;
+    border-radius: 10px;
+}
+#contact-us-image{
+    width: 100%;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+#content-container{
+    padding: 10px;
+}
+#content{
+    padding: 20px;
+}
+.input-fields{
+    padding: 5px;
+
+}
+#heading{
+    text-align: center;
+    padding: 5px;
+}
+input, textarea{
+    width: 100%;
+    padding: 20px;
+    border: none;
+    background: #B2DDDC;
+}
+#submitButton{
+    background-color: #F9BDC4;
+    border: 2px solid mintcream;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 10px 28px;
+    color: mintcream;
+    font-size: 20px;
+    margin-top: 20px;
+    display: inline-block;
+}
+#submitButton:hover {
+    background-color: mintcream;
+    color: #F9BDC4;
+    border: 2px solid #F9BDC4;
+}
+#submit-button-container{
+    padding: 0 10px 10px 10px;
+    text-align: center;
+}
+.rate {
+    display: inline-block;
+    text-align: center;
+    margin-left: 150px;
+}
+.rate:not(:checked) > input {
+    display: none;
+}
+.rate:not(:checked) > label {
+    float:right;
+    cursor:pointer;
+    font-size:50px;
+    color:#101010;
+}
+.rate > input:checked ~ label, /* show star when clicked */
+.rate:not(:checked) > label:hover, /* hover current star */
+.rate:not(:checked) > label:hover ~ label /* hover previous stars in the order*/{
+    color: #a96aa6;
+}
+
+.rate > input:checked + label:hover, /* hover current star when changing rating */
+.rate > input:checked ~ label:hover,
+.rate > label:hover ~ input:checked ~ label, /* lighten current selection when changing selection */
+.rate > input:checked ~ label:hover ~ label {
+    color: #f09eed;
+}

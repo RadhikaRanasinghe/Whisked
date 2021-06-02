@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Main page will be displayed after 4 seconds-->
+    <meta http-equiv="refresh" content="4;url=index.html" />
+    <link rel="stylesheet" type="text/css" href="CSS/PresentationPage.css">
+    <title>Presentation Page</title>
+</head>
+<body>
+<!-- bakery logo -->
+<div id="myAnimation"><img src="images/Shontaal-Whisked.png" alt="Whisked logo" width="300px"></div>
+<!-- When mouse moves over page logo will move towards the center -->
+<div id="myContainer" onmouseover="moveLogo()" onfocus="moveLogo()" class="container">
+    <!-- text -->
+    <div class="text" align="center">
+        <h2>Prepare to be 'Whisked' away</h2>
+        <p id="line">A website created for an online cakery.</p>
+        <p>
+            <br>Designed by:<br><br>
+            SE_CS Group B Group No 6<br><br>
+            Radhika Ranasinghe<br><br>
+            Shontaal Manuelpillai
+        </p>
+    </div>
+    <a href="PageDeveloper.html#task1">Page Developer</a>
+    <script>
+       //function for animation
+        function moveLogo() {
+            var elem = document.getElementById("myAnimation");
+            var pos = 0;
+            //wil execute fram function every millisecond
+            var id = setInterval(frame, 10);
+            function frame() {
+                //560px is the position that logo will stop at
+                if (pos == 560) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.left = pos + 'px';
+                }
+            }
+        }
+    </script>
+
+</div>
+</body>
+</html>

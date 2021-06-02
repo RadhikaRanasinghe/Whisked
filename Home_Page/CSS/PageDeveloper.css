@@ -1,0 +1,25 @@
+*{
+    font-family: "Marker Felt";
+    background-color: #B2DDDC;
+}
+
+table {
+    width:100%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 20px;
+    text-align: left;
+    font-size: 16px;
+}
+
+a:hover{
+    color: #A7A9AC;
+}
+
+a:visited{
+    color: red;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="CSS/OurProducts.css">
+    <link rel="stylesheet" type="text/css" href="CSS/Main-StyleSheet.css">
+    <title>Our products</title>
+</head>
+<body>
+<div class="menu-bar">
+    <div class="logo-container">
+        <img src="images/Shontaal-Whisked.png" alt="Logo" id="Logo">
+    </div>
+    <nav>
+        <ul>
+            <li class="active-page"><a href="index.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="ShopNow_.html">Order Now</a>
+                <div class="sub-menu-products">
+                    <ul>
+                        <li><a href="ShopNow_.html#cake">Cakes</a></li>
+                        <li><a href="ShopNow_.html#cupcake">Cupcakes</a></li>
+                        <li><a href="ShopNow_.html#pie">Pies</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="Recipes.html">Recipes</a>
+                <div class="sub-menu-products">
+                    <ul>
+                        <li><a href="Recipes.html#Cookies&Cream">Cookies & Cream Cake</a></li>
+                        <li><a href="Recipes.html#ApplePie">Apple Pie</a></li>
+                        <li><a href="Recipes.html#SaltedCaramel">Salted Caramel Cupcakes</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!--container holds all 3 products-->
+    <div class="container">
+
+        <!--Each main div holds 3 images and a button which when any are pressed(button or images) it will lead to
+            ShopNow_.html
+
+            Depending on the heading(h2) the link in the buttons and the images will take  the user to where the word is
+            -->
+
+        <h2 id="main-cake">CAKES</h2>
+        <!--main div 1-->
+        <div align="center" class='product' id="cakes">
+            <a href="ShopNow_.html#cake">
+                <img class="img1" src="images/Cakes/Red%20Velvet%20Cake.jpg" height="250px" width="350" alt="Red Velvet Cake"
+                ><img src="images/Cakes/Chcolate%20Fudge%20copy.jpg" height="250px" width="350" alt="Chcolate Fudge Cake"
+            ><img class="img2" src="images/Cakes/Strawberry%20Cheesecake%20copy.jpg" height="250px" width="350" alt="Strawberry Cheesecake">
+            </a>
+        </div>
+        <div class="btn" button align="center"id="btn1" onclick="window.location.href='ShopNow_.html#cake';">SHOP NOW</button>
+        </div>
+        <!-- gets current url and redirects it to the link give      alt- can use window.open for a new window -->
+
+        <h2>CUPCAKES</h2>
+        <!--main div 2-->
+        <div align="center" class='product' id="cupcakes">
+            <a href="ShopNow_.html#cupcake">
+            <img class="img1" src="images/Cupcakes/Unicorn%20Cupcakes.jpg" height="250px" width="350px" alt="Unicorn Cupcake"
+            ><img src="images/Cupcakes/Coffee%20Cupcakes.jpg" height="250px" width="350px" alt="Coffee Cupcake"
+        ><img class="img2" src="images/Cupcakes/Chocolate%20Cupcakes.jpg" height="250px" width="350px" alt="Chocolate Cupcake">
+            </a>
+        </div>
+        <div class="btn" button align="center"id="btn2" onclick="window.location.href='ShopNow_.html#cupcake';">SHOP NOW</button>
+        </div>
+
+
+        <h2>PIES</h2>
+        <!--main div 3-->
+        <div align="center" class='product' id="pies">
+            <a href="ShopNow_.html#pie">
+            <img class="img1" src="images/Pies/Key%20Lime%20Pie.jpg" height="250px" width="350px" alt="Key Lime Pie"
+            ><img src="images/Pies/Pumpkin%20Pie.jpg" height="250px" width="350px" alt="Pumpkin Pie"
+        ><img class="img2" src="images/Pies/Apple%20Pie.jpg" height="250px" width="350px" alt="Apple Pie">
+            </a>
+        </div>
+        <div class="btn" button align="center"id="btn3" onclick="window.location.href='ShopNow_.html#pie';">SHOP NOW</button>
+        </div>
+
+        <!--images used for font increase and decrease-->
+        <img class="arrows" alt="Increase text size" src="images/Arrow%20Up.png" onclick="resizeText(1)" />
+        <img class="arrows" alt="Decrease text size" src="images/Arrow%20Down.png" onclick="resizeText(-1)" />
+
+        <!--when back to the top button is pressed it will call the topFunction and scroll up-->
+        <button onclick="topFunction()" id="btn-top">Back to the top</button>
+
+        <script>
+            //function will increase and decrease any font in the body
+            function resizeText(multiplier) {
+                if (document.body.style.fontSize == "") {
+                    document.body.style.fontSize = "16px"; //starts from 16px
+                }
+                document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 1) + "px";
+                //increases or decreases by 1px when an image is clicked
+            }
+
+            //function for page to go back to the top
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+
+        </script>
+    </div>
+<footer class="footer">
+    <div class="footer-left">
+        <img src="images/Shontaal-Whisked.png" alt="logo">
+        <p class="footer-links">
+            <a href="#" class="link-1">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Order Now</a>
+            <a href="#">Recipes</a>
+            <a href="#">Contact</a>
+        </p>
+        <p class="whisked">Whisked © 2020</p>
+    </div>
+    <div class="footer-center">
+        <div>
+            <p><span>396, Shady Grove Avenue</span><span>Colombo, Sri Lanka</span></p>
+        </div>
+        <div>
+            <p><span>+94 77 123 4567</span></p>
+        </div>
+        <div>
+            <p><a href="mailto:support@whisked.com">support@whisked.com</a></p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <p class="about-company">
+            <span>About the company</span>
+            Whisked is a start-up bakery retail establishment located in Colombo, Sri Lanka.
+        </p>
+        <div class="footer-editors">
+            Edited by:<br>
+            <a href="PageDeveloper.html">Lysandra Manuelpillai</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
